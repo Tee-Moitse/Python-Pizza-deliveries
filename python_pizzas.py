@@ -35,11 +35,25 @@ elif size == "L":
     if extra_cheese == "Y":
         bill += 1
 
-#Next time, adding drink options
-# drink_option = input("Would you like to have a drink?: 'Y' for yes, 'N' for no: ")
 
-# drink_choice = input("Which drink would you like to have? Pepsi, Coca Cola, Fanta or Stoney: ").capitalize()
+drink_option = input("Would you like to have a drink?: 'Y' for yes, 'N' for no: ").upper()
 
+
+if drink_option == "Y":
+
+    drink_choice = input("Which drink would you like to have? Pepsi, Coca Cola, Fanta or Stoney: ").capitalize()
+    while drink_choice == "":
+        print("Please choose which drink you want.")
+        drink_choice = input("Which drink would you like to have? Pepsi, Coca Cola, Fanta or Stoney: ").capitalize()
+
+if drink_choice == "Pepsi":
+    print("Please pay $3")
+    bill += 3
+elif drink_choice == "Fanta" or drink_choice == "Stoney":
+    print("Please pay $5")
+    bill += 5
+elif drink_choice == "Coca Cola":
+    print("Please pay $7")
 
 
 
