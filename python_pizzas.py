@@ -6,6 +6,7 @@ size = input("What size pizza do you want? S, M or L: ").capitalize()
 bill = 0
 while size == "":
 
+
     # bill = 0
     print("Please select the you wnat for the pizza.")
     size = input("What size pizza do you want? S, M or L: ").capitalize()
@@ -50,14 +51,14 @@ if drink_option == "Y":
         print("Please choose which drink you want.")
         drink_choice = input("Which drink would you like to have? Pepsi, Coca Cola, Fanta or Stoney: ").capitalize()
 
-        if drink_choice == "Pepsi":
-            print("Please pay $3")
-            bill += 3
-        elif drink_choice == "Fanta" or drink_choice == "Stoney":
-            print("Please pay $5")
-            bill += 5
-        elif drink_choice == "Coca Cola":
-            print("Please pay $7")
+if drink_choice == "Pepsi":
+    print("Please pay $3")
+    bill += 3
+elif drink_choice == "Fanta" or drink_choice == "Stoney":
+    print("Please pay $5")
+    bill += 5
+elif drink_choice == "Coca Cola":
+    print("Please pay $7")
 
 
 print(f"Your final bill is: ${bill}.")
